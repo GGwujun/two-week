@@ -269,7 +269,7 @@ export default class ClassPage extends Component {
           renderItem={({ item }) => (
             <TouchableHighlight
               onPress={() => {
-                this.props.navigation.navigate('ClassDetailPage', { url: item.url })
+                this.props.navigation.navigate('MovieDetailPage', { url: item.url })
               }}>
               <View style={stylesFLOAT.container}>
                 <View style={stylesFLOAT.ImgContainer}>

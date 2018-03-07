@@ -109,7 +109,7 @@ export default class ClassDetailPage extends Component {
         <TouchableOpacity style={styles.videoContainer} activeOpacity={1} onPress={() => this.changeVideoFullScreen(!this.state.isFullScreen)}>
           <Video
             ref={component => this.videoRef = component}
-            source={require('../../res/class.mp4')}
+            source={{ uri: this.props.navigation.state.params.uri }}
             style={styles.video}
             rate={this.state.rate}
             paused={this.state.paused}
@@ -133,10 +133,14 @@ export default class ClassDetailPage extends Component {
     if (this.state.isFullScreen) {
       return null;
     }
-    const movieName = '测试';
+    const movieName = this.props.navigation.state.params.movieName;
     return (
       <View style={styles.navigationBarContainer}>
-        {this.renderBackTouchableOpacityImage(() => this.props.navigation.goBack())}
+        {this.renderBackTouchableOpacityImage(() => {
+          this.setState({
+            paused: false
+          }); this.props.navigation.goBack()
+        })}
         <Text style={styles.navigationBarText}>{movieName}</Text>
       </View>
     );
@@ -211,21 +215,6 @@ export default class ClassDetailPage extends Component {
   }
 
   changeVideoFullScreen(isFullScreen) {
-    /*if (this.timeOutId) {
-      clearTimeout(this.timeOutId);
-      this.timeOutId = undefined;
-    }
-    this.setState({
-      isFullScreen
-    });
-    if (!isFullScreen) {
-      //两秒后自动隐藏
-      this.timeOutId = setTimeout(() => {
-        this.setState({
-          isFullScreen: true
-        });
-      } ,2000);
-    }*/
     this.setState({
       isFullScreen
     });

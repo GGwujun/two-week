@@ -22,7 +22,7 @@ import AgendaScreen from './app/pages/AgendaScreen.js'
 
 import ClassPage from './app/pages/ClassPage.js'
 import ClassDetailPage from './app/pages/ClassDetailPage.js'
-
+import MovieDetailPage from './app/pages/movieDetailPage.js'
 
 import DairyPage from './app/pages/DairyPage.js'
 
@@ -249,6 +249,7 @@ const SimpleApp = StackNavigator({
   CreateNotePage: {
     screen: CreateNotePage
   },
+  MovieDetailPage: { screen: MovieDetailPage },
   SettingPage: { screen: SettingPage },
   FeedBackPage: { screen: FeedBackPage },
   ConnectPage: { screen: ConnectPage },

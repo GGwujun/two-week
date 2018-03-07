@@ -19,6 +19,7 @@
     "react-native-linear-gradient": "^2.3.0",
     "react-native-orientation": "^3.1.0",
     "react-native-progress": "^3.4.0",
+    "react-native-scrollable-tab-view": "^0.8.0",
     "react-native-snap-carousel": "^3.4.0",
     "react-native-swiper": "^1.5.13",
     "react-native-video": "^2.0.0",

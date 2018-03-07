@@ -157,7 +157,7 @@ export default class AgendaScreen extends Component {
     return (
       <TouchableOpacity
         onPress={() => {
-          {/* alert(this.state.partner) */}
+          {/* alert(this.state.partner) */ }
           this.props.navigation.navigate('DairyPage', {
             note_id: item.note_id,
             note_time: item.note_time,
